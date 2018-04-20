@@ -23,27 +23,27 @@
 		data() {
 			return {
 				labelPosition: 'right',
-				name:"123",
-				psw:"213"
+				name:"",
+				psw:""
 			}
 		},
 		methods :{
 			login () {
 				let that = this;
+				let params = new URLSearchParams();
+				params.append('name', this.name);
+				params.append('psw', this.psw);
 				this.$ajax({
 					method: 'post',
 					url: 'api/login.php',
-					data: {
-						name: this.name,
-						psw: this.psw
-					}
+					headers: {
+					   'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					data:params
 				}).then(function(response) {
-					console.log(response.data.status)
 					if( response.data.status == 0 ){
 						sessionStorage.setItem('key', 1);
 						that.$router.push({path:'/table'});
-					}else {
-						
 					}
 	            }).catch(function(error) {
 	               console.log(error);

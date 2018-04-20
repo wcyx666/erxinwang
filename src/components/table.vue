@@ -4,7 +4,7 @@
 		<div class="table-main">
 			<div class="table-main-tag">
 				<el-tag>出行</el-tag>
-				<el-tag type="success">拼车</el-tag>
+				<el-tag @click="pinche">拼车</el-tag>
 			</div>
 			<div class="table-main-tab">
 				<el-table
@@ -92,7 +92,7 @@
 		},
 		mounted () {
 			let that = this;
-			this.$ajax.post('api/chuxing.php')
+			this.$ajax.post('api/all-chuxing.php')
 				.then(function (response) {
 					that.tableData = response.data;
 				})
@@ -106,6 +106,17 @@
 			},
 			handleDelete(index, row) {
 				console.log(index, row);
+			},
+			pinche () {
+				console.log(1)
+				let that = this;
+				this.$ajax.post('api/pinche.php')
+					.then(function (response) {
+						that.tableData = response.data;
+					})
+					.catch(function (error) {
+						console.log(error);
+				});
 			}
 		}
 	}

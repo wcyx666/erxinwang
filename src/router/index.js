@@ -4,6 +4,7 @@ import Home from '@/components/home'
 import Admin from '@/components/admin'
 import Table from '@/components/table'
 import Business from '@/components/business'
+import Anli from '@/components/anli'
 Vue.use(Router)
 
 const router = new Router({
@@ -16,25 +17,31 @@ const router = new Router({
       path: '/erxin',
       name: 'Home',
       component: Home,
-      meta: { title: '而信-专业外包团队' },
+      meta: { title: '大同而信-专业外包团队' },
     },
     {
       path: '/admin',
       name: 'Admin',
       component: Admin,
-      meta: { title: '而信-管理登录' },
+      meta: { title: '大同而信-管理登录' },
     },
     {
       path: '/business',
       name: 'Business',
       component: Business,
-      meta: { title: '而信-商务合作' },
+      meta: { title: '大同而信-商务合作' },
     },
     {
       path: '/table',
       name: 'Table',
       component: Table,
-      meta: { requiresAuth: true,title: '而信-我的管理' },
+      meta: { requiresAuth: true,title: '大同而信-我的管理' },
+    },
+    {
+      path: '/anli',
+      name: 'Anli',
+      component: Anli,
+      meta: { title: '大同而信-案例展示' },
     }
   ]
 })

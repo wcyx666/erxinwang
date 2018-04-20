@@ -3,8 +3,8 @@
 		<Header></Header>
 		<div class="home-mian">
 			<div class="home_desc">
-				<h1>而信外包技术团队</h1>
-				<p>而信外包团队，承包企业站、小程序、App等技术开发与技术支持</p>
+				<h1>大同而信外包技术团队</h1>
+				<p>大同而信外包团队，承包企业站、小程序、App等技术开发与技术支持</p>
 				<div class="banner-box">
 					<img src="../assets/banner.png" alt="">
 				</div>

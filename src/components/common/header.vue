@@ -12,11 +12,11 @@
               商务
             </router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link :to="{ path:'/table' }">
               我的管理
             </router-link>  
-          </li>
+          </li> -->
           <li class="nav-item">
             大同
             <i class="el-icon-location" style="padding-left: 5px;"></i>
